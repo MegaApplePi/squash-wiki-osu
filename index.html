@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>squash-wiki-osu</title>
+  <link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml"/>
+  <link rel="icon" href="/favicon.png" sizes="32x32" type="image/png"/>
+  <link rel="stylesheet" href="resources/css/index.css"/>
+</head>
+<body>
+  <header class="header">
+    <h2 class="header__h2">squash-wiki-osu</h2>
+  </header>
+  <main class="main">
+    <div class="auth auth--hidden">
+      <!-- client_id = client_id from GitHub -->
+      <a href="https://github.com/login/oauth/authorize?client_id=CLIENT_ID&scope=public_repo">Sign in</a>
+    </div>
+    <div class="swo swo--hidden">
+      <div class="swo__group">
+        <label class="swo__label" for="owner">Owner:</label>
+        <input id="owner" class="swo__input" disabled readonly/>
+      </div>
+      <div class="swo__group">
+        <label class="swo__label" for="branch">Branch:</label>
+        <select id="branch" class="swo__input"></select>
+      </div>
+      <div class="swo__group">
+        <label class="swo__label" for="commit_title">Commit Title*</label>
+        <input id="commit_title" class="swo__input" maxlength="72"/>
+      </div>
+      <div class="swo__group">
+        <label class="swo__label" for="commit_message">Commit Description</label>
+        <textarea id="commit_message" class="swo__input"></textarea>
+      </div>
+      <div class="swo__group">
+        <ul>
+          <li>A backup branch is created on your repo if something wrong happens while running the API calls. It will be deleted if the API calls are successful.</li>
+          <li>Pressing the "Squash" button will squash the commits inside the branch. This page cannot reverse it.</li>
+          <li>This page will make a API calls after pressing Squash. Do not exit the page until a confirmation dialog is displayed.</li>
+        </ul>
+      </div>
+      <div class="swo__group">
+        <input id="squash" type="button" value="Squash" disabled/>
+      </div>
+      <div class="swo__group">
+        <div id="warns"></div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <a class="footer__source" href="https://github.com/MegaApplePi/squash-wiki-osu">Source</a>
+  </footer>
+  <script src="resources/js/index.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "php -S localhost:8080 & tsc --watch & sass --watch resources/scss/index.scss:resources/css/index.css"
+  }
+}

@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif; }
+
+.header {
+  background: #673AB7;
+  color: #fff;
+  padding: 0 5%;
+  height: 64px;
+  display: flex;
+  align-items: center; }
+  .header__h2 {
+    margin: 0; }
+
+.main {
+  margin: 0 10%;
+  min-height: 100vh;
+  min-height: calc(100vh - 96px); }
+
+.footer {
+  background: #7E57C2;
+  color: #fff;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  padding: 0 5%; }
+  .footer__source {
+    color: inherit; }
+
+.auth--hidden {
+  display: none; }
+
+.swo {
+  display: flex;
+  flex-direction: column; }
+  .swo--hidden {
+    display: none; }
+  .swo__group {
+    margin: 8px 0;
+    display: flex; }
+  .swo__label {
+    display: inline-flex;
+    min-width: 150px; }
+  .swo__input {
+    min-width: 300px;
+    box-sizing: border-box;
+    font-family: inherit; }
+
+.commit {
+  display: flex;
+  flex-direction: column; }
+
+#commit_message {
+  resize: none;
+  height: 100px; }
+
+/*# sourceMappingURL=index.css.map */
